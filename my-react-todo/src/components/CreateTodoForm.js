@@ -9,6 +9,9 @@ class CreateTodoForm extends Component {
 }
   onInputChange(event){
     console.log('create todo input changed')
+    this.setState({
+      todo: event.target.value
+    })
   }
   onFormSubmit(event){
     console.log('form submitted')
@@ -19,21 +22,18 @@ class CreateTodoForm extends Component {
       todo: ''
     })
 }     
-
   render(){
     return (
       <div className='createForm todoForm'>
         <h2>Create Todo Here!</h2>
-        <form>
+        <form onSubmit={event => this.onFormSubmit(event)}>
           <input
             onChange={event => this.onInputChange(event)}
             placeholder='Write a todo here ...'
             type='text'
-            value={this.state.todo} />            
-        </form>
-          <div>
-          <form onSubmit={event => this.onFormSubmit(event)}>
-          </div>
+            value={this.state.todo} />
+            <button type='submit'>Create Todo!</button>            
+        </form>                                                             
       </div>
     )
   }
