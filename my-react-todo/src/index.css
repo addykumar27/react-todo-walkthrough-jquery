@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Brush Script MT", cursive;
+  background-color:#4253f4;
 }
 
 header, .todos {
@@ -25,7 +26,8 @@ h2 {
 }
 
 h1, h2{
-  font-family: "Brush Script MT", cursive;
+  font-family: "Trebuchet MS Monaco";
+  text-align: center;
 }
 
 p {
