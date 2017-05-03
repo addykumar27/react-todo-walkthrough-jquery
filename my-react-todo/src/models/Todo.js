@@ -23,11 +23,11 @@ class TodoModel {
 	  })
 	  return request
 	}
-	static update(newtodo, id){
+	static update(newTodo, id){
     	let request = $.ajax({
-    	url: `https://super-crud.herokuapp.com/todos/${id}`,
+    	url: "https://super-crud.herokuapp.com/todos/" + id,
     	method: 'PUT',
-     	data: { body: newtodo }
+     	data: {body: newTodo}
     })
     return request
 

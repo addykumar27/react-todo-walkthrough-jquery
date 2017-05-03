@@ -16,7 +16,7 @@ constructor(){
   onFormSubmit(event){
     event.preventDefault()
     console.log('edit todo form submitted')
-    this.props.onUpdateTodo(this.state.updateTodo)
+    this.props.onUpdateTodo(this.state.updateTodo, this.props.todo._id)
     this.setState({
     updateTodo: ''
   })

@@ -48,9 +48,9 @@ class TodosContainer extends Component {
 	  })
 	}
 
- updateTodo(newTodoBody, id) {
+ updateTodo(newTodo, id) {
     console.log('updating todo in TodosContainer')
-    TodoModel.update(newTodoBody, id).then((res)=> {
+    TodoModel.update(newTodo, id).then((res)=> {
       let targetTodo = this.state.todos.find((item)=>{
         return item._id === id;
       })
